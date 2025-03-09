@@ -108,7 +108,7 @@ function displayWeatherCards(data){
 
 function fetchWeather(lat, lon) {
     loader.style.display = "block";
-    const url = `http://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=civillight&output=json`;
+    const url = `https://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=civillight&output=json`;
 
     fetch(url).then(response => {
         if (!response.ok){
