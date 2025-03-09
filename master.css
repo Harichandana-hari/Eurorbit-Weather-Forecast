@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Funnel Display", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F7FF;
+    color: #333;
+    height: 100%;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    min-height: 100vh;
+}
+
+.header--img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;  
+    box-shadow: inset 0rem -10rem #3db937;
+}
+
+.main--title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    
+}
+
+h3{
+    font-size: 1.1em;
+    margin-bottom: 1rem;
+}
+
+.weather-text{
+    margin-bottom: 0.5rem;
+}
+
+.city-select{
+    font-size: 1rem;
+    padding: 8px;
+    
+    border: 2px solid #333;
+    border-radius: 8px;
+    width: 250px;
+    background-color: #f8f9fa;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.loader {
+    display: none;
+    color: #333;
+    margin-top: 96px;
+    width: 4px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+    transform: translateX(-38px);
+    animation: l21 .5s infinite alternate linear;
+}
+
+@keyframes l21 {
+50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
+100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
+}
+
+.cards-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 56px 0px;
+    
+}
+
+.weather-card{
+    border: 2px solid #330;
+    border-radius: 8px;
+    padding: 16px;
+    width: 160px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.weather-icon {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    color: #A08FEB;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+footer {
+    margin-top: auto;
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: center;
+    position: static;
+    bottom: 0;
+}
